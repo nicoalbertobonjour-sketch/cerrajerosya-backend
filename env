@@ -1,0 +1,67 @@
+# ============================================
+# CERRAJEROSYA.ES - BACKEND CONFIGURATION
+# ARCHIVO .env PERSONALIZADO
+# ============================================
+
+# ========== APLICACIÓN ==========
+NODE_ENV=production
+PORT=3000
+API_URL=https://api.cerrajerosya.es
+
+# CORS (URLs permitidas - ajusta según tus dominios)
+CORS_ORIGIN=https://cerrajerosya.es,https://www.cerrajerosya.es,https://app.cerrajerosya.es
+
+# ========== SUPABASE ==========
+SUPABASE_URL=https://obghpxmykrysjpjnmksf.supabase.co
+SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9iZ2hweG15a3J5c2pwam5ta3NmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAwMjEzNTgsImV4cCI6MjA4NTU5NzM1OH0.yNqWQ8WmKtTXKuTTbKOwziZ_yaRQ1FR-uhvkkxnkNug
+SUPABASE_SERVICE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9iZ2hweG15a3J5c2pwam5ta3NmIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MDAyMTM1OCwiZXhwIjoyMDg1NTk3MzU4fQ.-io25ddW7I8Fo9-_Q-hdug1jHb1wxMRGRKKz_LqgTRE
+
+# ========== STRIPE ==========
+# Ve a: https://dashboard.stripe.com/test/apikeys
+STRIPE_SECRET_KEY=sk_test_PEGAR_AQUI_TU_STRIPE_SECRET_KEY
+STRIPE_PUBLISHABLE_KEY=pk_test_PEGAR_AQUI_TU_STRIPE_PUBLISHABLE_KEY
+STRIPE_WEBHOOK_SECRET=whsec_PEGAR_AQUI_TU_WEBHOOK_SECRET
+
+# ========== WHATSAPP CLOUD API (OPCIONAL) ==========
+# Ve a: https://developers.facebook.com/apps
+WHATSAPP_API_TOKEN=PEGAR_AQUI_SI_TIENES
+WHATSAPP_PHONE_NUMBER_ID=PEGAR_AQUI_SI_TIENES
+WHATSAPP_BUSINESS_ACCOUNT_ID=PEGAR_AQUI_SI_TIENES
+WHATSAPP_API_VERSION=v18.0
+
+# ========== VAPI.AI (OPCIONAL - Para IA de llamadas) ==========
+VAPI_API_KEY=sk_live_PEGAR_AQUI_SI_TIENES
+VAPI_WEBHOOK_SECRET=PEGAR_AQUI_SI_TIENES
+VAPI_ASSISTANT_ID=PEGAR_AQUI_SI_TIENES
+
+# ========== MAKE.COM (OPCIONAL) ==========
+MAKE_WEBHOOK_URL=https://hook.eu2.make.com/PEGAR_AQUI_SI_TIENES
+MAKE_API_KEY=PEGAR_AQUI_SI_TIENES
+
+# ========== JWT (AUTENTICACIÓN) ==========
+# CAMBIA ESTO por una clave aleatoria de mínimo 32 caracteres
+JWT_SECRET=cerrajerosya-super-secret-key-cambiar-en-produccion-2026
+JWT_EXPIRES_IN=7d
+JWT_REFRESH_EXPIRES_IN=30d
+
+# ========== RATE LIMITING ==========
+RATE_LIMIT_WINDOW_MS=900000
+RATE_LIMIT_MAX_REQUESTS=100
+RATE_LIMIT_PUBLIC_MAX=50
+
+# ========== PRECIOS BASE (EUR) ==========
+DEFAULT_LEAD_PRICE=25.00
+URGENT_LEAD_MULTIPLIER=1.5
+NIGHT_MULTIPLIER=1.3
+SUNDAY_MULTIPLIER=1.2
+
+# ========== LOGGING ==========
+LOG_LEVEL=info
+LOG_FILE=logs/app.log
+
+# ========== INSTRUCCIONES ==========
+# 1. Completa SUPABASE_SERVICE_KEY (la key secreta)
+# 2. Completa las credenciales de STRIPE
+# 3. (Opcional) Completa WhatsApp, Vapi, Make.com
+# 4. Cambia JWT_SECRET por algo más seguro
+# 5. Sube este archivo a Railway en "Variables"
